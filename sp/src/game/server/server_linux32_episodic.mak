@@ -446,6 +446,7 @@ CPPFILES= \
     hl2/weapon_shotgun.cpp \
     hl2/weapon_smg1.cpp \
     hl2/weapon_stunstick.cpp \
+    hl2/weapon_dl44.cpp \
     hltvdirector.cpp \
     h_ai.cpp \
     h_cycler.cpp \
@@ -3944,6 +3945,14 @@ ifneq (clean, $(findstring clean, $(MAKECMDGOALS)))
 endif
 
 $(OBJ_DIR)/weapon_stunstick.o : $(PWD)/hl2/weapon_stunstick.cpp $(PWD)/server_linux32_episodic.mak $(SRCROOT)/devtools/makefile_base_posix.mak
+	$(PRE_COMPILE_FILE)
+	$(COMPILE_FILE) $(POST_COMPILE_FILE)
+
+ifneq (clean, $(findstring clean, $(MAKECMDGOALS)))
+-include $(OBJ_DIR)/weapon_dl44.P
+endif
+
+$(OBJ_DIR)/weapon_dl44.o : $(PWD)/hl2/weapon_dl44.cpp $(PWD)/server_linux32_hl2.mak $(SRCROOT)/devtools/makefile_base_posix.mak
 	$(PRE_COMPILE_FILE)
 	$(COMPILE_FILE) $(POST_COMPILE_FILE)
 
