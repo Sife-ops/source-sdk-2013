@@ -1,6 +1,24 @@
+client_srv.so
+client_srv.so.dbg
+
+sp/src/games
+sp/src/game/client/client_linux32*
+sp/src/game/server/server_linux32*
+
+mathlib_linux32*
+raytrace_linux32*
+tier1_linux32*
+vgui_controls_linux32*
+*mathlib.a
+*raytrace.a
+*tier1.a
+*vgui_controls.a
+
+wg_*
+
 # Files to ignore when considering what GIT should commit.
 
-# Visual Studio 
+# Visual Studio
 *.suo
 *.user
 *.sln.docstates
@@ -21,7 +39,7 @@ ipch
 *.sln
 
 # OSX/Linux build products
-*.mak
+# *.mak
 *.mak.vpc_crc
 *.xcodeproj/
 obj*/
@@ -53,4 +71,3 @@ config.cfg
 
 # shader files
 *.tmp
-
