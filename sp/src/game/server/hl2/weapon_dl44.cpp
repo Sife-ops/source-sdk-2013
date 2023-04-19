@@ -286,17 +286,6 @@ bool CWeaponDL44::Reload()
 //-----------------------------------------------------------------------------
 void CWeaponDL44::AddViewKick()
 {
-	#define EASY_DAMPEN			2.3f
-	#define MAX_VERTICAL_KICK	17.0f // Degrees
-	#define SLIDE_LIMIT			0.11f // Seconds
-
-	// Get the view kick
-	CBasePlayer *pPlayer = ToBasePlayer( GetOwner() );
-
-	if ( pPlayer == NULL )
-		return;
-
-	DoMachineGunKick( pPlayer, EASY_DAMPEN, MAX_VERTICAL_KICK, m_fFireDuration, SLIDE_LIMIT );
 }
 
 //-----------------------------------------------------------------------------
