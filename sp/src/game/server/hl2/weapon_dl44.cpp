@@ -274,11 +274,7 @@ Activity CWeaponDL44::GetPrimaryAttackActivity()
 //-----------------------------------------------------------------------------
 bool CWeaponDL44::Reload()
 {
-	bool fRet = DefaultReload( GetMaxClip1(), GetMaxClip2(), ACT_VM_RELOAD );
-	if ( fRet )
-		WeaponSound( RELOAD );
-
-	return fRet;
+	return true;
 }
 
 //-----------------------------------------------------------------------------
